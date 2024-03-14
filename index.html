@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Metrics Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Website Metrics Analysis</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Background</h2>
+        <p class="content">This website helps make appointments with doctors across various clinics and days. Users were divided into two groups, A and B, each asked to schedule a specific appointment using a different website interface. Our aim is to determine if these interface changes would influence user behaviors when interacting with the interface. We analyzed misclick rate, time on page, and time to first click between the two groups. Results showed a big difference: Group B spent shorter time on the task. This finding may imply version B is more efficient to use and help improve user experience.</p>
+        <div class="center">
+            <img src="website.png" alt="Version B of Website">
+        </div>
+        </section>
+        <section>
+            <h2>Metric and Hypotheses</h2>
+            <ol>
+                <li>
+                    <h3>1. Misclick Rate</h3>
+                    <p class="subtitle">a. Definition</p><p class="content">The frequency with which users click something else on the page before finding the correct button for the task.</p>
+                    <p class="subtitle">b. Null Hypothesis</p><p class="content">The rate of users clicking the correct button for the task remains the same.</p>
+                    <p class="subtitle">c. Alternative Hypothesis</p><p class="content">More users click the correct button for the task.</p>
+                    <p class="subtitle">d. Prediction</p><p class="content">Fail to reject the null hypothesis. I didn't change the interface of the available appointments part. So user behavior should not be affected when trying to find the corrent appointment.</p>
+                </li>
+                <li>
+                    <h3>2. Time on Page</h3>
+                    <p class="subtitle">a. Definition</p><p class="content">Time spent on the webpage for each user group.</p>
+                    <p class="subtitle">b. Null Hypothesis</p><p class="content">Users spend the same time on the website.</p>
+                    <p class="subtitle">c. Alternative Hypothesis</p><p class="content">Users spent less time on the website.</p>
+                    <p class="subtitle">d. Prediction</p><p class="content">Reject the null hypothesis. I changed background color and placed buttons more center to the screen. Users are expected to spend less time on the page.</p>
+                </li>
+                <li>
+                    <h3>3. Time to First Click</h3>
+                    <p class="subtitle">a. Definition</p><p class="content">Time spent to click one button for the first time.</p>
+                    <p class="subtitle">b. Null Hypothesis</p><p class="content">Users spend the same time first clicking one button after entering the website.</p>
+                    <p class="subtitle">c. Alternative Hypothesis</p><p class="content">Users spend less time first clicking on button after entering the website.</p>
+                    <p class="subtitle">d. Prediction</p><p class="content">Reject the null hypothesis. I changed background color and hover color of making appointment buttons. Users are expected to spend less time finding the buttons and will get feedback when hovering over the buttons.</p>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>Results and Analysis</h2>
+            <div class="metric">
+                <h3>1. Misclick Rate</h3>
+                <p class="subtitle">a. Results</p>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Average (A)</td>
+                        <td>0.2609</td>
+                    </tr>
+                    <tr>
+                        <td>Variance (A)</td>
+                        <td>0.2016</td>
+                    </tr>
+                    <tr>
+                        <td>Average (B)</td>
+                        <td>0.0714</td>
+                    </tr>
+                    <tr>
+                        <td>Variance (B)</td>
+                        <td>0.0714</td>
+                    </tr>
+                    <tr>
+                        <td>T-score</td>
+                        <td>1.6088</td>
+                    </tr>
+                    <tr>
+                        <td>P-value</td>
+                        <td>0.0583</td>
+                    </tr>
+                </table>
+                <p class="subtitle">b. Statistical Test </p>
+                <p class="content">I choose One-tailed t-test because I want to learn the misclick rate of which group of users is bigger.</p>
+                <p class="subtitle">c. Conclusion of Statistical Significance</p>
+                <p class="content">The difference between versions A and B with respect to the metric is not statistically significant.</p>
+                <p class="subtitle">d. Analysis</p>
+                <p class="content">Group A’s misclick rate (0.26) is higner than group B’s (0.07). Since users in two groups were actually the same, this may be attributed to their getting more familiar with the website.</p>
+                <p class="subtitle">e. Decision</p>
+                <p class="content">I fail to reject the null hypothesis for P-value is more than 0.05.</p>
+
+                <h3>2. Time on Page</h3>
+                <p class="subtitle">a. Results</p>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                    <td>Average (A)</td>
+                    <td>23041</td>
+                    </tr>
+                    <tr>
+                        <td>Variance (A)</td>
+                        <td>209218649.6</td>
+                    </tr>
+                    <tr>
+                        <td>Average (B)</td>
+                        <td>9781</td>
+                    </tr>
+                    <tr>
+                        <td>Variance (B)</td>
+                        <td>46168677.83</td>
+                    </tr>
+                    <tr>
+                        <td>Degrees of Freedom</td>
+                        <td>33.24229466</td>
+                    </tr>
+                    <tr>
+                        <td>T-score</td>
+                        <td>3.728501449</td>
+                    </tr>
+                    <tr>
+                        <td>P-value (A &lt; B)</td>
+                        <td>0.0004</td>
+                    </tr>
+                </table>
+                <p class="subtitle">b. Statistical Test </p>
+                <p class="content">I choose One-tailed t-test because I want to learn whether less time is spent on the website.</p>
+                <p class="subtitle">c. Conclusion of Statistical Significance</p>
+                <p class="content">The difference between versions A and B with respect to the metric is statistically significant.</p>
+                <p class="subtitle">d. Analysis</p>
+                <p class="content">Group A’s time (23041) is longer than group B’s (9781). This suggests that users spend more time on the website in group A compared to group B.</p>
+                <p class="subtitle">e. Decision</p>
+                <p class="content">I reject the null hypothesis for P-value is less than 0.05.</p>
+
+                <h3>3. Time to First Click</h3>
+                <p class="subtitle">a. Results</p>
+                <table>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>Average (A)</td>
+                        <td>12217.42857</td>
+                    </tr>
+                    <tr>
+                        <td>Variance (A)</td>
+                        <td>47658542.16</td>
+                    </tr>
+                    <tr>
+                        <td>Average (B)</td>
+                        <td>4328</td>
+                    </tr>
+                    <tr>
+                        <td>Variance (B)</td>
+                        <td>1682116.444</td>
+                    </tr>
+                    <tr>
+                        <td>Degrees of Freedom</td>
+                        <td>22.79636373</td>
+                    </tr>
+                    <tr>
+                        <td>T-score</td>
+                        <td>5.053106431</td>
+                    </tr>
+                    <tr>
+                        <td>P-value (A &lt; B)</td>
+                        <td>0.0001</td>
+                    </tr>
+                </table>
+                <p class="subtitle">b. Statistical Test</p>
+                <p class="content">I chose a one-tailed t-test because I want to determine whether less time was spent on the website.</p>
+                <p class="subtitle">c. Conclusion of Statistical Significance</p>
+                <p class="content">The difference between versions A and B with respect to the metric is statistically significant.</p>
+                <p class="subtitle">d. Analysis</p>
+                <p class="content">Group A’s time to first click (12217) is longer than group B’s (4328). This suggests that users in group A take more time to click on the first button after entering the website compared to users in group B.</p>
+                <p class="subtitle">e. Decision</p>
+                <p class="content">I reject the null hypothesis as the P-value is less than 0.05.</p>
+
+            </div>
+        </section>
+        <section>
+            <h2>Summary</h2>
+            <p class="content">Version A shows higher variances across all metrics measured, indicating a wider spread of data points around the mean. This may imply version A’s data are less accurate compared to version B. And version A’s average time on page and average time to first click are both higher, showing version A’s interface may be less efficient for users to interact with.</p>
+        </section>
+    </main>
+</body>
+</html>
